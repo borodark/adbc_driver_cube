@@ -1,4 +1,4 @@
-SRC ?= /home/io/projects/learn_erl/adbc
+SRC ?=
 TRIPLET ?= x86_64-linux-gnu
 VERSION ?= $(shell git describe --tags --abbrev=0 2>/dev/null | sed 's/^v//')
 

@@ -8,19 +8,15 @@ by clients like the Elixir ADBC bindings.
 - third_party/apache-arrow-adbc: vendored Arrow ADBC sources (required)
 - scripts/build.sh: build the shared library
 - scripts/package.sh: create a tar.gz for release
-- scripts/sync_from_fork.sh: copy the ADBC sources from the Elixir fork
+- scripts/sync_from_fork.sh: optional sync helper for refreshing ADBC sources
 
 ## Quick start (Linux amd64)
 
-1) Sync the vendored ADBC sources from the fork:
-
-   ./scripts/sync_from_fork.sh /home/io/projects/learn_erl/adbc
-
-2) Build the driver:
+1) Build the driver:
 
    ./scripts/build.sh
 
-3) Package the tarball:
+2) Package the tarball:
 
    VERSION=0.1.0 TRIPLET=x86_64-linux-gnu ./scripts/package.sh
 
@@ -40,6 +36,6 @@ The artifact will land in dist/ as:
 
 ## Make targets
 
-- `make sync SRC=/path/to/adbc`
+- `make sync SRC=/path/to/adbc` (optional refresh)
 - `make build`
 - `make package VERSION=0.1.0 TRIPLET=x86_64-linux-gnu`
