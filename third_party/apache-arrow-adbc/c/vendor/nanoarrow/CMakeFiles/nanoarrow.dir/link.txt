@@ -1,0 +1,2 @@
+/usr/bin/ar qc libnanoarrow.a CMakeFiles/nanoarrow.dir/nanoarrow.c.o
+/usr/bin/ranlib libnanoarrow.a

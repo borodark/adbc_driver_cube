@@ -1,0 +1,11 @@
+prefix=@CMAKE_INSTALL_PREFIX@
+exec_prefix=${prefix}
+libdir=${exec_prefix}/@CMAKE_INSTALL_LIBDIR@
+includedir=${prefix}/@CMAKE_INSTALL_INCLUDEDIR@
+
+Name: ADBC Driver for Cube SQL
+Description: Apache Arrow Database Connectivity (ADBC) driver for Cube SQL
+Version: @ADBC_BASE_VERSION@
+Requires: arrow
+Cflags: -I${includedir}
+Libs: -L${libdir} -ladbc_driver_cube
