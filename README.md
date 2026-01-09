@@ -12,11 +12,13 @@ by clients like the Elixir ADBC bindings.
 
 ## Quick start (Linux amd64)
 
-1) Build the driver:
+1) Ensure FlatBuffers is installed (or set `FLATBUFFERS_DIR` to its CMake config dir).
+
+2) Build the driver:
 
    ./scripts/build.sh
 
-2) Package the tarball:
+3) Package the tarball:
 
    VERSION=0.1.0 TRIPLET=x86_64-linux-gnu ./scripts/package.sh
 
@@ -33,6 +35,7 @@ The artifact will land in dist/ as:
 
 - Only Linux amd64 is wired up for now.
 - The build uses the vendored Arrow ADBC C sources.
+- FlatBuffers is required; set `FLATBUFFERS_DIR` if CMake cannot find it.
 
 ## Make targets
 

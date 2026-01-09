@@ -1,2 +1,6 @@
 /build/
 /dist/
+/tests/cpp/test_all_types
+/tests/cpp/test_cube_integration
+/tests/cpp/test_error_handling
+/tests/cpp/test_simple
