@@ -8,7 +8,6 @@ by clients like the Elixir ADBC bindings.
 - third_party/apache-arrow-adbc: vendored Arrow ADBC sources (required)
 - scripts/build.sh: build the shared library
 - scripts/package.sh: create a tar.gz for release
-- scripts/sync_from_fork.sh: optional sync helper for refreshing ADBC sources
 
 ## Quick start (Linux amd64)
 
@@ -39,6 +38,7 @@ The artifact will land in dist/ as:
 
 ## Make targets
 
-- `make sync SRC=/path/to/adbc` (optional refresh)
 - `make build`
 - `make package VERSION=0.1.0 TRIPLET=x86_64-linux-gnu`
+- `make test` (compile C++ tests only)
+- `make test_live` (run C++ tests; requires Cube server running)
